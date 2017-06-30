@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  
+    <!-- Bootstrap files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- D3.js files -->
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+  
+ 
+  {% if title %}
+  <title>Dashboard - {{ title }}</title>
+  {% else %}
+  <title>Welcome to the Dashboard</title>
+  {% endif %}
+ </head>
+ <body>  
+   
+  <nav class="navbar navbar-default">
+   <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-brand">Dashboard</a>
+     </div>
+     <ul class="nav navbar-nav">
+       <li><a href="/chart1">Graph 1</a></li>
+       <li><a href="/chart2">Graph 2</a></li>
+       <li><a href="/chart3">Graph 3</a></li>
+       <li><a href="/chart4">Graph 4</a></li>
+       <li><a href="/chart5">Graph 5</a></li>
+     </ul>
+   </div>
+  </nav>
+  
+  {% block content %}{% endblock %}
+   
+ </body>
+</html>
